@@ -45,4 +45,8 @@ app.post('/images', upload.single('image'), async (req, res) => {
   res.send({imagePath: `/images/${result.Key}`})
 })
 
+app.get('/test', (req, res)=>{
+  res.send('App de URL de Upload de Imgs!')
+})
+
 app.listen(process.env.PORT, () => console.log("listening on port 8080"))
